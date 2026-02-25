@@ -1,16 +1,47 @@
+# Использование шаблона
+
+#### 1. Склонировать репозиторий
+```sh
+$ git clone https://github.com/Apsapeh/uv-otter-jupyter-template.git
+```
+
+#### 2. Создать задание в `Task.ipynb`
+
+#### 3. Упаковать
+```sh
+$ uv run release.py
+```
+
+Будет создан файл `Task.zip` с ноутбуком, настройками окружения, и инструкцией
+Можно заменть имя ноутбука и выходного файла. Настройка в начале `release.py`
+
+
+<br/>
+
 # Создание UV проекта
 
 #### 1. Инициализация проекта
 ```sh
-$ uv init <имя проекта> # uv init jupyter_uv_env
+$ uv init <имя проекта> # uv init Task
+$ cd <имя проекта>
 ```
 
 #### 2. Добавление зависимостей
 
 ```sh
-$ uv add <имя зависимости> 
-$ uv add otter-grader
-$ uv add ipykernel # содержит jupyter, matplotlib и другое
+$ uv --dev add <имя зависимости> 
+$ uv --dev add otter-grader
+$ uv --dev add ipykernel # содержит jupyter, matplotlib и другое
 ...
 ```
+
+Не совсем уверен, зачем нужен флаг `--dev`, работает и без него, но так в доке
+
+#### 3. Компиляция Otter
+```sh
+$ uv run --with otter-grader otter assign <Ноутбук> <Выходная папка>
+```
+
+#### 4. Дистрибуция
+Нужно упаковать *pyproject.toml* и *скомпилированный ноутбук*
 

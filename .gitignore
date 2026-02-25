@@ -8,3 +8,7 @@ wheels/
 
 # Virtual environments
 .venv
+
+requirements.txt
+.tmp-dist/
+Task.zip
