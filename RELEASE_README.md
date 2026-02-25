@@ -2,7 +2,7 @@
 
 1. Убедитесь, что установлен `python`: https://www.python.org/downloads/
 
-2. Убедитесь, что установлен `uv`: https://docs.astral.sh/uv/getting-started/installation/i
+2. Убедитесь, что установлен `uv`: https://docs.astral.sh/uv/getting-started/installation/
 
 3. Создайте окружение и установите зависимости:
 
